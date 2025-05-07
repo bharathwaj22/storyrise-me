@@ -23,6 +23,10 @@ body{
     font-family: "source-sans-bold-black";
     src: url("../fonts/SourceSans3-Black.ttf");
 }
+@font-face {
+    font-family: "six-caps";
+    src: url("../fonts/SixCaps-Regular.ttf");
+}
 .text{
     color: #ffffff;
     font-size: 24px;
@@ -35,6 +39,8 @@ body{
     background-image: url('../images/box-iamge.png');
     background-size: cover;
     background-position: center;
+    
+    
 }
 /* .story-header{
     width: 80%;
@@ -54,13 +60,16 @@ body{
     height: 117px;
     border: 2px solid #828282;
     border-radius: 84px;
-    background-color: #050505;
+    background-color: transparent;
     padding-left: 5%;
     padding-right: 5%;
     align-items: center;
     position: relative;
     transition: all 0.3s ease-in-out;
     margin-top: 50px;
+    backdrop-filter: blur(3px); 
+    -webkit-backdrop-filter: blur(5px); 
+    
 }
 
 .story-header.fixed {
@@ -73,6 +82,8 @@ body{
     border-radius: 0px;
     margin-top:0px;
     background-color: transparent;
+    backdrop-filter: none; 
+    -webkit-backdrop-filter: none; 
     box-shadow: none;
     z-index: 1050;
    
@@ -128,6 +139,7 @@ body{
     align-items: center;
     font-size: 18px;
     cursor: pointer;
+   padding-top: 4px;
 
 
 }

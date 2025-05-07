@@ -1025,7 +1025,9 @@ function Coffee_case() {
           Storyrise
         </div>
       </section> */}
-      <Footer></Footer>
+      <div className="text-align-top">
+        <Footer></Footer>
+        </div>
     </section>
   );
 }
