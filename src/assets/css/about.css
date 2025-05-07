@@ -38,6 +38,883 @@
 }
 
 
+.about-bg-iamge{
+    width: 100%;
+   
+    background-image: url('../images/abouts/about.png');
+    background-size: cover;
+    background-position: center;
+    height: auto;
 
+}
+.all-padding-about{
+    padding-left: 5%;
+}
+
+.about-padding{
+    padding-left: 5%;
+    /* height: 500px; */
+    margin-top: 10%;
+    padding-bottom: 10%;
+}
+
+.about-text{
+    font-size: 18px;
+    color: #F2F2F2;
+    font-family: "nunito-regular";
+    font-weight: 400;
+    width: 50%;
+    margin-top: 2%;
+}
+
+
+.about-agency{
+    color: #FFFFFF;
+    font-family: "source-sans-bold";
+    font-size: 48px;
+    font-weight: 600;
+    padding-top: 10%;
+}
+.content-about{
+    color: #9E9E9E;
+    font-family: "source-sans-bold";
+    font-size: 28px;
+    font-weight: 700;
+    padding-left: 25%;
+    padding-top: 3%;
+}
+.content-about-small{
+    font-family: "source-sans-regular";
+    color: #9E9E9E;
+    font-size: 21px;
+    font-weight: 400;
+    padding-left: 25%;
+    padding-top: 3%;
+}
+
+.about-padding-small{
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: #9E9E9E;
+    
+}
+.about-small-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.about-small-div-video{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    gap: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.card-about{
+    width: 300px;
+    height: 350px;
+    background-color: #8450E7;
+    border-radius: 55px;
+    transform: rotate(-5deg);
+    color: #FFFFFF;
+    font-family: "six-caps";  
+    font-weight: 400;
+    font-size: 112px;  
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+/* .card-about:hover {
+    transform: rotate(0deg) scale(1.05);
+  } */
+.card-about1{
+    width: 300px;
+    height: 350px;
+    background-color: #FF0016;
+    border-radius: 55px;
+    transform: rotate(5deg);
+    color: #FFFFFF;
+    font-family: "six-caps";  
+    font-weight: 400;
+    font-size: 112px;  
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.card-about2{
+    width: 300px;
+    height: 350px;
+    background-color: #FFFFFF;
+    border-radius: 55px;
+    transform: rotate(-5deg);
+    color: #8450E7;
+    font-family: "six-caps";  
+    font-weight: 400;
+    font-size: 112px;  
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.card-width{
+    width: 50%;
+}
+.about-card-content{
+    color: #9E9E9E;
+    font-family: "source-sans-bold";
+    font-size: 48px;
+    font-weight: 700;
+    
+}
+.card-about-small{
+    color: #9E9E9E;
+    font-family: "source-sans-bold";
+    font-size: 21px;
+    font-weight: 700;
+    
+    padding-top: 2%;
+}
+.card-bg-color{
+    background-color: #FFFFFF1A;
+}
+
+.ceo-image img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+.ceo-name{
+    font-size: 48px;
+    color: #FEFEFE;
+    font-weight: 600;
+    font-family: "source-sans-bold";
+    text-align: center;
+
+}
+.ceo-name-position{
+    font-size: 28px;
+    color: #FEFEFE;
+    font-weight: 600;
+    font-family: "source-sans-bold";
+    text-align: center;
+
+}
+
+.ceo-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 0; 
+    padding-top: 2%;
+  }
+  
+  .ceo-name,
+  .ceo-name-position {
+    margin: 0; 
+    padding: 0;
+    line-height: 1.2;
+  }
+  
+
+  .carousel-container-about {
+    padding: 0%;           
+  }
+  
+  .carousel-item-about {
+    height: 300px; 
+    width: 500px;             
+    display: flex;              
+    align-items: center;        
+    justify-content: center;    
+    /* background-color: #f8f9fa;   */
+    border-radius: 12px;       
+    overflow: hidden;        
+    margin: 0 10%;           
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; 
+    cursor: pointer;
+  }
+  
+  .carousel-item-about img {
+    width: 200px;              
+    height: 200px;              
+    object-fit: cover;         
+    border-radius: 50px;  
+         
+  }
+  .carousel-item-about:hover {
+    transform: scale(1.05); /* Scale image to 105% on hover */
+  }
+  
+  /* Mobile View Optimization */
+  @media (max-width: 768px) {
+  
+    
+  .carousel-container-about {
+    padding: 0 5%;           
+  }
+  
+    .carousel-item-about {
+      width:90%;
+        height: 200px;          
+                 
+    }
+  }
+  
+
+  /* .partner-swiper-container {
+    background-color: #000;
+    padding: 40px 0;
+  } */
+  
+  .partner-swiper {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+ 
+  .partner-card img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .partner-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .partner-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 4px 0 0;
+  }
+  
+  /* .swiper-slide-active .partner-card {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.3);
+  } */
+  .partner-card {
+    /* background: #fff; */
+    border-radius: 25px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+    transform: scale(0.9);
+    opacity: 0.5;
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .swiper-slide-active .partner-card {
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 10;
+    /* box-shadow: 0 20px 40px rgba(255, 255, 255, 0.4); */
+  }
+
+ 
+
+  .about-foot-iamge{
+    width: 100%;
+   
+    background-image: url('../images/abouts//color-about.png');
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 454px;
+    border-radius: 69px;
+    margin-top: 10%;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    
+    
+}
+
+.header-about-iamge{
+    width: 100%;
+   
+    background-image: url('../images/abouts/about-black-foot.png');
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 10%;
+    
+    
+}
+
+.rise-about{
+    font-family: "source-sans-bold-black";
+    color: #FFFFFF;
+    font-size: 73px;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 5%;
+}
+.connect-about{
+    background-color: #FFC927;
+    width: 80%;
+height: 70px;
+border-radius: 61px;
+align-items: center;
+text-align: center;
+display: flex;
+justify-content: center;
+color: #000000;
+font-family: "source-sans-bold";
+font-size: 29px;
+margin-top: 2%;
+
+}
+
+
+
+
+/* media qyeris */
+
+@media (max-width: 992px) {
+    /* .about-bg-iamge{
+      height: auto;
+    }   */
+    .about-padding{
+      padding-left: 5%;
+      /* margin-top: 50%; */
+      /* padding-bottom: 10%; */
+    }
+    .about-text{
+      font-size: 18px;
+      color: #F2F2F2;
+      font-family: "nunito-regular";
+      font-weight: 400;
+      width: 80%;
+      margin-top: 2%;
+  }
+  .about-agency{
+      font-size: 20px;
+  }
+  .content-about{
+      font-size: 18px;
+      padding-left: 1%;
+      padding-right: 1%;
+  }
+  .content-about-small{
+      font-size: 14px;
+      padding-left: 1%;
+      padding-right: 1%;
+  }
+  
+  .story-section {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+      cursor:grab;
+  }
+  .about-small-div{
+    flex-wrap: nowrap;
+  }
+  .about-small-div-video{
+    flex-wrap: nowrap;
+  }
+ 
+  .card-about{
+      width: 200px;
+      height: 250px;
+      
+      border-radius: 30px;
+      
+  }
+  .card-about1{
+      width: 200px;
+      height: 250px;
+      margin-top: 5%;
+      border-radius: 30px;
+      
+  }
+  .card-about2{
+      width: 200px;
+      height: 250px;
+      margin-top: 5%;
+      border-radius: 30px;
+      font-size: 80px;
+      
+  }
+  /* .card-width{
+      width: 90%;
+  } */
+  .about-card-content{
+      font-size: 25px;
+      margin-top: 5%;
+  }
+  .card-about-small{
+      font-size: 18px;
+  }
+  .partner-swiper {
+      width: 100%;
+      max-width: 1100px;
+      margin: auto;
+  }
+  
+  .ceo-name{
+      font-size: 25px;
+  }
+  .ceo-name-position{
+      font-size: 18px;
+  }
+    
+  .about-foot-iamge{
+      width: 100%;
+     
+      background-image: url('../images/abouts//color-about.png');
+      background-size: cover;
+      background-position: center;
+      width: 90%;
+      height: auto;
+      border-radius: 30px;
+      margin-top: 10%;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 5%;
+  }
+  .rise-about{
+      font-family: "source-sans-bold-black";
+      color: #FFFFFF;
+      font-size: 25px;
+      font-weight: 900;
+      text-align: center;
+      padding-top: 5%;
+  }
+  .connect-about{
+      background-color: #FFC927;
+      width: 80%;
+  height:auto;
+  border-radius: 61px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: #000000;
+  font-family: "source-sans-bold";
+  font-size: 18px;
+  margin-top: 2%;
+  
+  
+  }
+  .ceo-image img{
+      width: 300px;
+      height: 300px;
+  }
+  
+    
+  }
+
+@media (max-width: 767px) {
+    /* .about-bg-iamge{
+      height: auto;
+    }   */
+    .about-padding{
+      padding-left: 5%;
+      /* margin-top: 50%; */
+      /* padding-bottom: 10%; */
+    }
+    .about-text{
+      font-size: 18px;
+      color: #F2F2F2;
+      font-family: "nunito-regular";
+      font-weight: 400;
+      width: 80%;
+      margin-top: 2%;
+  }
+  .about-agency{
+      font-size: 20px;
+  }
+  .content-about{
+      font-size: 18px;
+      padding-left: 1%;
+      padding-right: 1%;
+  }
+  .content-about-small{
+      font-size: 14px;
+      padding-left: 1%;
+      padding-right: 1%;
+  }
+  
+  .story-section {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      cursor:grab;
+  }
+  .card-about{
+      width: 200px;
+      height: 250px;
+      
+      border-radius: 30px;
+      
+  }
+  .card-about1{
+      width: 200px;
+      height: 250px;
+      margin-top: 5%;
+      border-radius: 30px;
+      
+  }
+  .card-about2{
+      width: 200px;
+      height: 250px;
+      margin-top: 5%;
+      border-radius: 30px;
+      font-size: 80px;
+      
+  }
+  .card-width{
+      width: 90%;
+  }
+  .about-card-content{
+      font-size: 25px;
+      margin-top: 5%;
+  }
+  .card-about-small{
+      font-size: 18px;
+  }
+  .partner-swiper {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+  }
+  
+  .ceo-name{
+      font-size: 25px;
+  }
+  .ceo-name-position{
+      font-size: 18px;
+  }
+    
+  .about-foot-iamge{
+      width: 100%;
+     
+      background-image: url('../images/abouts//color-about.png');
+      background-size: cover;
+      background-position: center;
+      width: 90%;
+      height: auto;
+      border-radius: 30px;
+      margin-top: 10%;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 5%;
+  }
+  .rise-about{
+      font-family: "source-sans-bold-black";
+      color: #FFFFFF;
+      font-size: 25px;
+      font-weight: 900;
+      text-align: center;
+      padding-top: 5%;
+  }
+  .connect-about{
+      background-color: #FFC927;
+      width: 80%;
+  height:auto;
+  border-radius: 61px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: #000000;
+  font-family: "source-sans-bold";
+  font-size: 18px;
+  margin-top: 2%;
+  
+  
+  }
+  .ceo-image img{
+      width: 300px;
+      height: 300px;
+  }
+  
+    
+  }
+
+@media (max-width: 480px) {
+  .about-bg-iamge{
+    height: auto;
+  }  
+  .about-small-div{
+    flex-wrap: wrap;
+  }
+  .about-small-div-video{
+    flex-wrap: wrap-reverse;
+  }
+  .about-padding{
+    padding-left: 5%;
+    margin-top: 50%;
+    /* padding-bottom: 10%; */
+  }
+  .about-text{
+    font-size: 18px;
+    color: #F2F2F2;
+    font-family: "nunito-regular";
+    font-weight: 400;
+    width: 80%;
+    margin-top: 2%;
+}
+.about-agency{
+    font-size: 20px;
+}
+.content-about{
+    font-size: 18px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.content-about-small{
+    font-size: 14px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.story-section {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    cursor:grab;
+}
+.card-about{
+    width: 200px;
+    height: 250px;
+    
+    border-radius: 30px;
+    
+}
+.card-about1{
+    width: 200px;
+    height: 250px;
+    margin-top: 5%;
+    border-radius: 30px;
+    
+}
+.card-about2{
+    width: 200px;
+    height: 250px;
+    margin-top: 5%;
+    border-radius: 30px;
+    font-size: 80px;
+    
+}
+.card-width{
+    width: 90%;
+}
+.about-card-content{
+    font-size: 25px;
+    margin-top: 5%;
+}
+.card-about-small{
+    font-size: 18px;
+}
+.partner-swiper {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+.ceo-name{
+    font-size: 25px;
+}
+.ceo-name-position{
+    font-size: 18px;
+}
+  
+.about-foot-iamge{
+    width: 100%;
+   
+    background-image: url('../images/abouts//color-about.png');
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: auto;
+    border-radius: 30px;
+    margin-top: 10%;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+.rise-about{
+    font-family: "source-sans-bold-black";
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 5%;
+}
+.connect-about{
+    background-color: #FFC927;
+    width: 80%;
+height:auto;
+border-radius: 61px;
+align-items: center;
+text-align: center;
+display: flex;
+justify-content: center;
+color: #000000;
+font-family: "source-sans-bold";
+font-size: 18px;
+margin-top: 2%;
+
+
+}
+.ceo-image img{
+    width: 300px;
+    height: 300px;
+}
 
   
+}
+@media (max-width: 360px) {
+    .about-bg-iamge{
+      height: auto;
+    }  
+    .about-small-div{
+        flex-wrap: wrap;
+      }
+      .about-small-div-video{
+        flex-wrap: wrap-reverse;
+      }
+    .about-padding{
+      padding-left: 5%;
+      margin-top: 50%;
+      /* padding-bottom: 10%; */
+    }
+    .about-text{
+      font-size: 18px;
+      color: #F2F2F2;
+      font-family: "nunito-regular";
+      font-weight: 400;
+      width: 80%;
+      margin-top: 2%;
+  }
+  .about-agency{
+      font-size: 20px;
+  }
+  .content-about{
+      font-size: 18px;
+      padding-left: 1%;
+      padding-right: 1%;
+  }
+  .content-about-small{
+      font-size: 14px;
+      padding-left: 1%;
+      padding-right: 1%;
+  }
+  
+  .story-section {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      cursor:grab;
+  }
+  .card-about{
+      width: 200px;
+      height: 250px;
+      
+      border-radius: 30px;
+      
+  }
+  .card-about1{
+      width: 200px;
+      height: 250px;
+      margin-top: 5%;
+      border-radius: 30px;
+      
+  }
+  .card-about2{
+      width: 200px;
+      height: 250px;
+      margin-top: 5%;
+      border-radius: 30px;
+      font-size: 80px;
+      
+  }
+  .card-width{
+      width: 90%;
+  }
+  .about-card-content{
+      font-size: 25px;
+      margin-top: 5%;
+  }
+  .card-about-small{
+      font-size: 18px;
+  }
+  .partner-swiper {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+  }
+  .ceo-name{
+      font-size: 25px;
+  }
+  .ceo-name-position{
+      font-size: 18px;
+  }
+    
+  .about-foot-iamge{
+      width: 100%;
+     
+      background-image: url('../images/abouts//color-about.png');
+      background-size: cover;
+      background-position: center;
+      width: 90%;
+      height: auto;
+      border-radius: 30px;
+      margin-top: 10%;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 5%;
+  }
+  .rise-about{
+      font-family: "source-sans-bold-black";
+      color: #FFFFFF;
+      font-size: 25px;
+      font-weight: 900;
+      text-align: center;
+      padding-top: 5%;
+  }
+  .connect-about{
+      background-color: #FFC927;
+      width: 80%;
+  height:auto;
+  border-radius: 61px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: #000000;
+  font-family: "source-sans-bold";
+  font-size: 18px;
+  margin-top: 2%;
+  
+  
+  }
+  .ceo-image img{
+      width: 300px;
+      height: 300px;
+  }
+  
+    
+  }

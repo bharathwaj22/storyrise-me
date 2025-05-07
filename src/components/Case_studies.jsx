@@ -414,7 +414,9 @@ function Case_studies() {
             Storyrise
           </div>
         </section> */}
+       <div className="text-align-top">
         <Footer></Footer>
+        </div>
       </section>
     </>
   );

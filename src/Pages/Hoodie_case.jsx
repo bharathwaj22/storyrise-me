@@ -927,7 +927,7 @@ function Storyrise_case() {
               <img src={Ztrategize_banner} alt="Coca Cola" />
             </div>
           </Carousel>
-        </div>c
+        </div>
       </section>
 
       {/* footer */}
@@ -1023,7 +1023,9 @@ function Storyrise_case() {
           Storyrise
         </div>
       </section> */}
-      <Footer/>
+     <div className="text-align-top">
+        <Footer></Footer>
+        </div>
     </section>
   );
 }

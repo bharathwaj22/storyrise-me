@@ -22,7 +22,7 @@ const goAboutus = () => {
   return (
     <>
       <section>
-              <div className="text-center text-align-top ">
+              <div className="text-center  ">
                 <div className="foot-back ">
                   <div>
                     <a href="/" target="_blank" rel="noopener noreferrer">

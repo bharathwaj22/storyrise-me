@@ -607,6 +607,11 @@ border-top-right-radius: 20px;
   border-radius: 8px;        
 }
 
+.caseinside-img-aryu{
+  width: 400px;
+  height: 400px;
+}
+
 /* Mobile View Optimization */
 @media (max-width: 768px) {
 
