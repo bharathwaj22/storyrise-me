@@ -1,0 +1,43 @@
+.story-about{
+    font-size: 100px;
+    font-family: "source-sans-bold";
+    color: #FFC927;
+    font-weight: 600px;
+}
+.about-section{
+    background-color: #111111;
+    /* height: 75vh; */
+   
+}
+.about-story{
+    background-color: #272727;
+    /* height: 75vh; */
+   
+}
+.about-title{
+    width: 171px;
+    height: 50px;
+    border-radius: 100px;
+    border: 1px solid #FEFEFE;
+    text-align: center;
+    align-items: center;
+    color: #FEFEFE;
+    font-family: "nunito-bold";
+    font-size: 18px;
+    padding-top: 10px;
+} 
+
+.about-para{
+    color: #9E9E9E;
+    font-family: "source-sans-regular";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 40px;
+
+}
+
+
+
+
+  

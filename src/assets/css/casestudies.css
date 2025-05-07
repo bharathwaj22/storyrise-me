@@ -1,0 +1,120 @@
+.text-align-top-case{
+    margin-top: 8%;
+}
+.all-box-explore{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   align-items: center;
+   gap:50px;
+
+}
+.explore-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 50%;
+    border: 2px solid rgb(230, 232, 236);
+}
+.explore-btn{
+    font-family: "nunito-bold";
+color: #0b0b0b;
+   padding: 10px 30px;
+    border-radius: 8px;
+    background-color: rgb(230, 232, 236);
+    cursor: pointer;
+}
+.explore-text{
+    font-family: "nunito-regular";
+    font-size: 25px;
+    color: #FFFFFF;
+
+}
+
+
+
+
+/* media qyeris */
+
+
+/* Large Screens (Desktops) */
+@media (min-width: 1200px) {
+    
+
+    .explore-text {
+        font-size: 28px;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .all-box-explore {
+        width: 80%;
+    }
+
+    .explore-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .explore-text {
+        font-size: 22px;
+    }
+
+    .explore-btn {
+        padding: 8px 25px;
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 767px) {
+    .text-align-top-case {
+        margin-top: 8%;
+    }
+
+    .all-box-explore {
+        width: 90%;
+    }
+
+    .explore-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .explore-text {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .explore-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Screens (Very Small Phones) */
+@media (max-width: 480px) {
+    .text-align-top-case{
+        margin-top: 15%;
+    }
+    .all-box-explore{
+        gap: 10px;
+    }
+    .explore-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .explore-text {
+        font-size: 14px;
+    }
+
+    .explore-btn {
+        padding: 6px 15px;
+        font-size: 12px;
+       
+    }
+    .btn-align-top{
+margin-top: 5%;
+    }
+}
