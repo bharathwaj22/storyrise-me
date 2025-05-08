@@ -461,16 +461,13 @@ border-top-right-radius: 20px;
 
 
 
-/* .card-flip-case {
-  display: flex;
-  gap: 30px;
-  margin-top: 20px;
-} */
+
 
 .flip-card {
   width: 272px;
   height: 400px;
   perspective: 1000px;
+  display: inline-block;
 }
 
 .flip-card-inner {
@@ -501,9 +498,9 @@ border-top-right-radius: 20px;
   transform: rotateY(180deg);
 }
 
-.card-flip-case:hover .flip-card-inner {
+/* .card-flip-case:hover .flip-card-inner {
   transform: rotateY(180deg);
-}
+} */
 
 /* videos */
 

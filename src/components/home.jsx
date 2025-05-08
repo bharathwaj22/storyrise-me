@@ -50,6 +50,7 @@ import Image7 from "../assets/images/image 7.svg";
 import Image8 from "../assets/images/image 8.svg";
 import Ogimage from "../../public/storylise-logo.png";
 import Footer from "../Pages/Footer";
+import Bulb from "../Pages/Bulb";
 
 // rotae
 
@@ -331,7 +332,7 @@ function home() {
           </div>
         </section>
 
-        <section>
+        {/* <section>
           <div className="text-center text-align-top ">
             <h2>
               <span className="smart-name">A Smarter</span>
@@ -346,7 +347,9 @@ function home() {
               hackers, phishing scams, and unauthorized access.
             </div>
           </div>
-        </section>
+        </section> */}
+
+        {/* <Bulb></Bulb> */}
 
         <section>
           <div className="d-flex justify-content-center text-align-top">

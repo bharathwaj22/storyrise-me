@@ -36,7 +36,7 @@ const Scroll_btn = () => {
       {showButton && (
        <div className="scroll-to-top">
        <button onClick={scrollToTop} className="scroll-btn">
-       <MdKeyboardDoubleArrowUp />
+       <MdKeyboardDoubleArrowUp  className='scroll-icon'/>
        </button>
      </div>
      
