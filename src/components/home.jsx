@@ -99,7 +99,7 @@ function home() {
       "StoryRise is your ultimate Influencer Marketing Hub, connecting brands with top influencers to boost engagement, trust, & sales through the power of influence",
       true
     );
-    setMetaTag("og:image","../storylise-logo.png", true);
+    setMetaTag("og:image", "../storylise-logo.png", true);
     setMetaTag("og:url", window.location.href, true);
     setMetaTag("twitter:card", "summary_large_image", true);
     setMetaTag("twitter:title", "Influencer Marketing Hub", true);
@@ -108,7 +108,7 @@ function home() {
       "StoryRise is your ultimate Influencer Marketing Hub, connecting brands with top influencers to boost engagement, trust, & sales through the power of influence",
       true
     );
-    setMetaTag("twitter:image","../storylise-logo.png", true);
+    setMetaTag("twitter:image", "../storylise-logo.png", true);
   }, []);
   //end meta data
   const images = [
@@ -702,9 +702,7 @@ function home() {
 
         <section>
           <div className="text-center text-align-top ">
-            <h2 className="answer-name">
-              Got any Questions? We've got Answers.
-            </h2>
+            <h2 className="answer-name">FAQS</h2>
           </div>
 
           <div className="d-flex justify-content-center mt-5 quest-algin">
@@ -712,78 +710,97 @@ function home() {
               <div className="d-flex flex-wrap gap-3 mt-3 mt-md-5">
                 <div className="quest-box">
                   <div className="quest-flex">
-                    <div>What’s the Off Menu delivery process? </div>
+                    <div>What is Influencer Marketing? </div>
                     <div className="quest-icon">
                       <GrAddCircle />
                     </div>
                   </div>
 
                   <div className={`hover-text-quest `}>
-                    Whether you're an individual, small business, or large
-                    enterprise, ourflexible plans offer the perfect balance of
-                    protection, performance.
+                    Influencer marketing is a tactic in which brands partner
+                    with people who have a large online following to market
+                    products or services. These influencers possess loyal
+                    followers who believe their recommendations, so it is an
+                    effective means of creating brand awareness and generating
+                    sales.
                   </div>
                 </div>
                 <div className="quest-box">
                   <div className="quest-flex">
-                    <div>How does the A La Carte process work?</div>
+                    <div>Who is an Influencer?</div>
                     <div className="quest-icon">
                       <GrAddCircle />
                     </div>
                   </div>
 
                   <div className="hover-text-quest">
-                    Whether you're an individual, small business, or large
-                    enterprise, ourflexible plans offer the perfect balance of
-                    protection, performance.
+                    An influencer is a person who has the ability to form
+                    opinions and sway buying behavior based on their
+                    credibility, expertise, or high level of connection with
+                    their followers. They often possess an active base in a
+                    particular niche. Successful influencers are often not
+                    famous people but regular folks who have earned trust in
+                    their circles. Surprisingly, influencers don't necessarily
+                    have to be human! At StoryRise, we match brands with
+                    influencers who make a tangible impact and create lasting
+                    engagement.
                   </div>
                 </div>
               </div>
               <div className="d-flex flex-wrap gap-3 mt-3 mt-md-5">
                 <div className="quest-box">
                   <div className="quest-flex">
-                    <div>What if I’m not happy with my designs? </div>
+                    <div>What Do Influencer Marketing Agencies Do? </div>
                     <div className="quest-icon">
                       <GrAddCircle />
                     </div>
                   </div>
 
                   <div className="hover-text-quest">
-                    Whether you're an individual, small business, or large
-                    enterprise, ourflexible plans offer the perfect balance of
-                    protection, performance.
+                    Influencer marketing agencies pair brands with appropriate
+                    influencers and take campaigns from launch to execution.
+                    They work on strategy, outreach, content, execution, and
+                    tracking to drive effective results. StoryRise assists
+                    brands in establishing real relationships and influencing
+                    positive engagement through influencer partnerships.
                   </div>
                 </div>
                 <div className="quest-box">
                   <div className="quest-flex">
-                    <div>How do I share feedback?</div>
+                    <div>
+                      How does influencer marketing build real brand trust?
+                    </div>
                     <div className="quest-icon">
                       <GrAddCircle />
                     </div>
                   </div>
 
                   <div className="hover-text-quest">
-                    Whether you're an individual, small business, or large
-                    enterprise, ourflexible plans offer the perfect balance of
-                    protection, performance.
+                    Influencer marketing fosters trust through authenticity.
+                    Shoppers trust influencers they follow, embracing their
+                    suggestions over traditional advertising. This interpersonal
+                    relationship results in increased engagement, improved
+                    conversions, and better brand credibility.
                   </div>
                 </div>
               </div>
               <div className="d-flex flex-wrap gap-3 mmt-3 mt-md-5">
                 <div className="quest-box">
                   <div className="quest-flex">
-                    <div>
-                      Is there a limit to how many requests I can have?{" "}
-                    </div>
+                    <div>How Do I Find the Right Influencers?</div>
                     <div className="quest-icon">
                       <GrAddCircle />
                     </div>
                   </div>
 
                   <div className="hover-text-quest">
-                    Whether you're an individual, small business, or large
-                    enterprise, ourflexible plans offer the perfect balance of
-                    protection, performance.
+                    At StoryRise, we bridge the gap for brands and reach the
+                    perfect influencer with our network reach and industry
+                    experience. We understand your audience, the platform you
+                    favor, and brand ethos to bring on influencers that have
+                    genuine involvement and organic engagement. Our holistic
+                    approach delivers collaborations that bring maximum results
+                    for your brand.
                   </div>
                 </div>
                 <div
@@ -791,46 +808,55 @@ function home() {
                   onMouseEnter={() => setShowText7(true)}
                 >
                   <div className="quest-flex">
-                    <div>Can we have calls? </div>
+                    <div>
+                      How Can I Measure the Success of an Influencer Campaign?{" "}
+                    </div>
                     <div className="quest-icon">
                       <GrAddCircle />
                     </div>
                   </div>
 
                   <div className="hover-text-quest">
-                    Whether you're an individual, small business, or large
-                    enterprise, ourflexible plans offer the perfect balance of
-                    protection, performance.
+                    Success is gauged by such Key Performance Indicators (KPIs)
+                    as engagement rate, reach, conversions, website traffic, and
+                    Return On Investment (ROI). High-end analytics solutions
+                    enable monitoring these metrics and tailoring future
+                    campaigns.
                   </div>
                 </div>
               </div>
               <div className="d-flex flex-wrap gap-3 mt-3 mt-md-5">
                 <div className="quest-box">
                   <div className="quest-flex">
-                    <div>Why wouldn’t I just hire a full-time designer? </div>
+                    <div>
+                      Which Social Media Platforms Are Best for Influencer
+                      Marketing?{" "}
+                    </div>
                     <div className="quest-icon">
                       <GrAddCircle />
                     </div>
                   </div>
 
                   <div className="hover-text-quest">
-                    Whether you're an individual, small business, or large
-                    enterprise, ourflexible plans offer the perfect balance of
-                    protection, performance.
+                    The most widely used sites are Instagram and YouTube with
+                    high engagement rates and visual story-telling features.
+                    TikTok is also being increasingly used because of its
+                    virality potential, especially among younger audiences.
                   </div>
                 </div>
                 <div className="quest-box">
                   <div className="quest-flex">
-                    <div>What’s your cancellation policy? </div>
+                    <div>What Are the Benefits of Influencer Marketing? </div>
                     <div className="quest-icon">
                       <GrAddCircle />
                     </div>
                   </div>
 
                   <div className="hover-text-quest">
-                    Whether you're an individual, small business, or large
-                    enterprise, ourflexible plans offer the perfect balance of
-                    protection, performance.
+                    Influencer marketing fosters brand awareness, trust
+                    building, and more engagement. It also delivers targeted
+                    exposure so that companies can reach niche groups more
+                    easily than through traditional advertising.
                   </div>
                 </div>
               </div>
@@ -936,7 +962,7 @@ function home() {
           </div>
         </section> */}
         <div className="text-align-top">
-        <Footer></Footer>
+          <Footer></Footer>
         </div>
       </section>
     </>
