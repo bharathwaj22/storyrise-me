@@ -208,9 +208,9 @@ function About_us() {
             },
           })
           .to(trigger, {
-            opacity: 0, // Fade out the element
-            y: 100, // Move element downward
-            scale: 0.9, // Shrink the element's size while scrolling
+            opacity: 0, 
+            y: 100, 
+            scale: 0.9, 
             duration: 0.5,
           });
       });
