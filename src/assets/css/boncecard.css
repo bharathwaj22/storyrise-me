@@ -470,6 +470,10 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 1000;
 }
+.scroll-icon{
+  z-index: 10000;
+  color: #fff !important;
+}
 
 .scroll-btn:hover {
   transform: scale(1.1);
