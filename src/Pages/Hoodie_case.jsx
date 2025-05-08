@@ -35,7 +35,10 @@ import Ztrategize_banner from "../assets/images/ztrategize-banner.svg";
 
 // videos'
 
-import Video1 from "../assets/images/video1.mp4";
+
+import Video1 from "../assets/images/videos/hovideo1.mp4";
+import Video2 from "../assets/images/videos/hovideo2.mp4";
+import Video3 from "../assets/images/videos/hovideo3.mp4";
 
 
 // icon
@@ -836,7 +839,7 @@ function Storyrise_case() {
               <div className="videos-case-box">
                 <video
                   ref={videoRef}
-                  src={Video1}
+                  src={Video3}
                   autoPlay
                   loop
                   muted={isMuted}
@@ -862,7 +865,7 @@ function Storyrise_case() {
               <div className="videos-case-box2">
                 <video
                   ref={videoRef1}
-                  src={Video1}
+                  src={Video2}
                   autoPlay
                   loop
                   muted={isMuted1}
