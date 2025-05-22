@@ -51,6 +51,7 @@ import Image8 from "../assets/images/image 8.svg";
 import Ogimage from "../../public/storylise-logo.png";
 import Footer from "../Pages/Footer";
 import Bulb from "../Pages/Bulb";
+import Story_how_image from "../assets/images/abouts/storyrise-how-image.svg";
 
 // rotae
 
@@ -313,22 +314,11 @@ function home() {
         {/* card  */}
         <section>
           <div className="d-flex justify-content-center mt-5">
-            <div>
-              <div className="how-work text-center">How it works</div>
-
-              {/* <BounceCards
-                className="custom-bounceCards"
-                images={images}
-                containerWidth={500}
-                containerHeight={250}
-                animationDelay={1}
-                animationStagger={0.08}
-                easeType="elastic.out(1, 0.5)"
-                transformStyles={transformStyles}
-                enableHover={true}
-              /> */}
-              <Cards></Cards>
-            </div>
+            <img
+              src={Story_how_image}
+              alt="storyrisew"
+              className="story-how-image"
+            />
           </div>
         </section>
 
@@ -737,16 +727,10 @@ function home() {
                   </div>
 
                   <div className="hover-text-quest">
-                    An influencer is a person who has the ability to form
-                    opinions and sway buying behavior based on their
-                    credibility, expertise, or high level of connection with
-                    their followers. They often possess an active base in a
-                    particular niche. Successful influencers are often not
-                    famous people but regular folks who have earned trust in
-                    their circles. Surprisingly, influencers don't necessarily
-                    have to be human! At StoryRise, we match brands with
-                    influencers who make a tangible impact and create lasting
-                    engagement.
+                    An influencer is someone who can shape opinions and
+                    influence buying decisions through trust and niche
+                    expertise. At StoryRise, we connect brands with impactful
+                    influencers who drive real engagement
                   </div>
                 </div>
               </div>
@@ -797,13 +781,10 @@ function home() {
                   </div>
 
                   <div className="hover-text-quest">
-                    At StoryRise, we bridge the gap for brands and reach the
-                    perfect influencer with our network reach and industry
-                    experience. We understand your audience, the platform you
-                    favor, and brand ethos to bring on influencers that have
-                    genuine involvement and organic engagement. Our holistic
-                    approach delivers collaborations that bring maximum results
-                    for your brand.
+                    At StoryRise, we connect brands with the right influencers
+                    using our strong network and industry know-how. By
+                    understanding your audience, platform, and brand values, we
+                    ensure authentic collaborations that drive real results.
                   </div>
                 </div>
                 <div
