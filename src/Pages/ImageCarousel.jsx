@@ -78,57 +78,121 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { useNavigate } from "react-router-dom";
 
 import Coffie_banner from "../assets/images/abouts/coffe-about.png";
 import Aryu_banner from "../assets/images/abouts/aryu-about.png";
 
-const partners = [
-  {
-    src: Aryu_banner,
-    alt: "ARYU Academy",
-    name: "Talenmagnet",
-    sub: "Teach Company",
-    onClick: () => console.log("ARYU Clicked")
-  },
-  {
-    src: Coffie_banner,
-    alt: "Coffee House",
-    name: "CocaCola",
-    sub: "Food Company",
-    onClick: () => console.log("Coffee Clicked")
-  },
-  {
-    src: Aryu_banner,
-    alt: "ARYU Academy",
-    name: "Talenmagnet",
-    sub: "Teach Company",
-    onClick: () => console.log("ARYU Clicked")
-  },
-  {
-    src: Coffie_banner,
-    alt: "Coffee House",
-    name: "CocaCola",
-    sub: "Food Company",
-    onClick: () => console.log("Coffee Clicked")
-  },
-  {
-    src: Aryu_banner,
-    alt: "ARYU Academy",
-    name: "Talenmagnet",
-    sub: "Teach Company",
-    onClick: () => console.log("ARYU Clicked")
-  },
-  {
-    src: Coffie_banner,
-    alt: "Coffee House",
-    name: "CocaCola",
-    sub: "Food Company",
-    onClick: () => console.log("Coffee Clicked")
-  },
-  // Add more slides as needed
-];
+// const partners = [
+//   {
+//     src: Aryu_banner,
+//     alt: "ARYU Academy",
+//     name: "Talenmagnet",
+//     sub: "Teach Company",
+//     onClick: () => console.log("ARYU Clicked")
+//   },
+//   {
+//     src: Coffie_banner,
+//     alt: "Coffee House",
+//     name: "CocaCola",
+//     sub: "Food Company",
+//     onClick: coffeeCase
+//   },
+//   {
+//     src: Aryu_banner,
+//     alt: "ARYU Academy",
+//     name: "Talenmagnet",
+//     sub: "Teach Company",
+//     onClick: () => console.log("ARYU Clicked")
+//   },
+//   {
+//     src: Coffie_banner,
+//     alt: "Coffee House",
+//     name: "CocaCola",
+//     sub: "Food Company",
+//     onClick: coffeeCase
+//   },
+//   {
+//     src: Aryu_banner,
+//     alt: "ARYU Academy",
+//     name: "Talenmagnet",
+//     sub: "Teach Company",
+//     onClick: () => console.log("ARYU Clicked")
+//   },
+//   {
+//     src: Coffie_banner,
+//     alt: "Coffee House",
+//     name: "CocaCola",
+//     sub: "Food Company",
+//     onClick: coffeeCase
+//   },
+//   // Add more slides as needed
+// ];
 
 export default function PartnerSwiper() {
+    const navigate = useNavigate();
+
+  const aryuCase = () => {
+    navigate("/aryuacademy-guy");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // const hoodieCase = () => {
+  //   navigate("/hoodie-guy");
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // };
+
+  const coffeeCase = () => {
+    navigate("/coofee-guy");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const partners = [
+    {
+      src: Aryu_banner,
+      alt: "ARYU Academy",
+      name: "Talenmagnet",
+      sub: "Teach Company",
+      onClick: aryuCase
+    },
+    {
+      src: Coffie_banner,
+      alt: "Coffee House",
+      name: "CocaCola",
+      sub: "Food Company",
+      onClick: coffeeCase
+    },
+    {
+      src: Aryu_banner,
+      alt: "ARYU Academy",
+      name: "Talenmagnet",
+      sub: "Teach Company",
+      onClick: aryuCase
+    },
+    {
+      src: Coffie_banner,
+      alt: "Coffee House",
+      name: "CocaCola",
+      sub: "Food Company",
+      onClick: coffeeCase
+    },
+    {
+      src: Aryu_banner,
+      alt: "ARYU Academy",
+      name: "Talenmagnet",
+      sub: "Teach Company",
+      onClick: aryuCase
+    },
+    {
+      src: Coffie_banner,
+      alt: "Coffee House",
+      name: "CocaCola",
+      sub: "Food Company",
+      onClick: coffeeCase
+    },
+  ];
+
+
   return (
     <div className="partner-swiper-container mt-3">
       <Swiper
