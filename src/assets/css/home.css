@@ -149,12 +149,14 @@ body{
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease;
+    /* transition: transform 0.3s ease, color 0.3s ease; */
+    transition: all 0.8s ease;
   }
   
   .case-studies:hover {
-    transform: translateY(-5px); 
+    /* transform: translateY(-5px);  */
     color: #595a5b; 
+    background-color: #FEFEFE;
   }
   
   .arrow-head-icon {
@@ -163,7 +165,9 @@ body{
   }
   
   .case-studies:hover .arrow-head-icon {
-    transform: translateX(5px); 
+    transform: translateX(5px);
+    color: #595a5b; 
+    /* background-color: #FEFEFE;  */
   }
   
 .arrow-head-icon{
@@ -690,14 +694,15 @@ position: relative;
     width:600px;
     /* height:100%;
     padding-bottom: 2%; */
-    height: 180px;
+    height: 90px;
     background-color: #111111;
     border-radius: 28px;
     align-items: center;
     color: #FEFEFE;
     font-family: "nunito-bold";
     font-weight: 600;
-    transition: box-shadow 0.5s ease, border-bottom 0.3s ease;
+    overflow: hidden;
+    transition: height 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease, border-bottom 0.5s ease;
     cursor: pointer;
     font-size: 20px;
   
@@ -716,11 +721,16 @@ position: relative;
     padding-right: 2%;
     text-align: left;
     align-items: center;
+    transition: height 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease, border-bottom 0.5s ease;
+
 
 }
 .quest-box:hover {
     border-bottom: 4px solid #FFC9274D;
     box-shadow: 0px 4px 10px #FFC9274D;
+    height: 180px;
+    transform: translateY(-10px);
+
 }
 
 
@@ -733,6 +743,7 @@ position: relative;
     transform: rotate(50deg);
     color: #FFC927; 
     font-size: 30px;
+    transform: translateY(-10px);
 }
 /* .hover-text-quest{
     font-size: 16px;
@@ -750,16 +761,18 @@ position: relative;
     font-size: 14px;
     font-family: "nunito-regular";
     font-weight: 400;
-    color: #F2F2F2;
+    color: #FED90F;
     opacity: 0;
     margin-left: 10px;
     transform: translateY(-10px);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    overflow: hidden;
+    transition: height 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease, border-bottom 0.5s ease;
 }
 
 .quest-box:hover .hover-text-quest {
     opacity: 1;
     transform: translateY(0);
+
 }
 
 /* foot */
@@ -825,6 +838,71 @@ position: relative;
 
 }
 
+.header-middle{
+    background-color: transparent;
+    /* border: 2px solid #828282; */
+    display: flex;
+    justify-content: space-evenly ;
+    border-radius: 30px;
+    width: 50%;
+    height: 50px;
+    align-items: center;
+
+}
+.all-head-color{
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+.header-abouts-name{
+    font-family: "source-sans-regular";
+    font-size: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+ .menu-mobile-home{
+        display: none;
+        color: #ffffff;
+}
+.custom-menu {
+  background-color:rgb(50, 50, 50); /* Bootstrap blue or change to your color */
+  padding: 10px 0;
+  position: absolute;
+  top:100%; /* below the menu icon */
+  left: 10%;
+  z-index: 1000;
+  text-align: center;
+  animation: slideDown 0.3s ease;
+  width: 80%;
+  border-radius: 10px;
+ 
+
+}
+
+.custom-menu-item {
+  display: block;
+  color: #e0dede;
+  padding: 10px 0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.custom-menu-item:hover {
+  background-color:  #FED90F;
+  color: #6f6c6c;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 
@@ -1066,6 +1144,25 @@ position: relative;
     .quest-box {
         width: 400px;
     }
+    .story-header{
+        width: 95%;
+    }
+    .story-header.fixed {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    border: none;
+    border-radius: 0px;
+    margin-top:0px;
+    background-color: transparent;
+    backdrop-filter: none; 
+    -webkit-backdrop-filter: none; 
+    box-shadow: none;
+    z-index: 1050;
+   
+}
 }
 
 @media (max-width: 768px) {
@@ -1168,7 +1265,15 @@ position: relative;
             perspective:4000px;
         }
      
-      
+     .header-middle {
+        display: none;
+    }
+   .case-studies {
+        display: none !important;
+    }
+    .menu-mobile-home{
+        display: block;
+    }
      
 
 
@@ -1312,6 +1417,7 @@ position: relative;
         align-items: center;
         font-size: 14px;
         cursor: pointer;
+        display: none !important;
     
     
     }
@@ -1427,5 +1533,17 @@ position: relative;
     .insta-footer-aryu-tech {
         font-size: 16px;
     }
+    .header-middle {
+        display: none;
+    }
+   .case-studies {
+        display: none;
+    }
+    .menu-mobile-home{
+        display: block;
+    }
+
+
+
      
 }

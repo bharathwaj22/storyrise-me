@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect,useRef } from "react";
 import CustomCursor from "../components/Custom_mouse";
 
 import SplashCursor from "../components/splash_cursor";
@@ -61,6 +61,11 @@ import Coffie_banner from "../assets/images/coffe-banner.svg";
 import Aryu_banner from "../assets/images/aryu-banner.svg";
 import ImageCarousel from "../Pages/ImageCarousel";
 import { FaArrowRight } from "react-icons/fa6";
+
+
+import { AiFillHome } from "react-icons/ai";
+import { HiMenuAlt3 } from "react-icons/hi";
+
 
 gsap.registerPlugin(ScrollTrigger);
 function About_us() {
@@ -235,6 +240,26 @@ function About_us() {
     navigate("/coofee-guy");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+
+  
+    const goAboutus = () => {
+      navigate("/about-us");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+     const gohome = () => {
+      navigate("/");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+     const goContactus = () => {
+      navigate("/contact-us");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  
+    const [isOpen, setIsOpen] = useState(false);
+    const menuRef = useRef(null);
+    const toggleMenu = () => setIsOpen(!isOpen);
+  
  
   return (
     <>
@@ -255,28 +280,72 @@ function About_us() {
               isScrolled ? "blur-bg" : ""
             }`}
           >
-            <div
-              className={`story-header  d-flex justify-content-between ${
-                isScrolled ? "fixed" : ""
-              }`}
-            >
-              <div>
-                <a href="/">
-                  <img
-                    src={Storylise_logo}
-                    alt="Storylise logo"
-                    className="storyrise"
-                  />
-                </a>
-              </div>
-              <div
-                className="case-studies d-flex justify-content-evenly"
-                onClick={goTocasestudies}
-              >
-                CASE STUDIES
-                <GoArrowUpRight className="arrow-head-icon" />
-              </div>
-            </div>
+             <div
+                          className={`story-header  d-flex justify-content-between ${
+                            isScrolled ? "fixed" : ""
+                          }`}
+                        >
+                          <div>
+                            <a href="/">
+                              <img
+                                src={Storylise_logo}
+                                alt="Storylise logo"
+                                className="storyrise"
+                              />
+                            </a>
+                          </div>
+                          <div className="header-middle">
+                            <div onClick={gohome} className="all-head-color">
+                              <AiFillHome />
+                            </div>
+                            <div className="header-abouts-name" onClick={goAboutus}>
+                              About us
+                            </div>
+                            <div className="header-abouts-name">Blog</div>
+                            <div className="header-abouts-name" onClick={goTocasestudies}>
+                              Case Studies{" "}
+                            </div>
+                          </div>
+                          <div
+                            className="case-studies d-flex justify-content-evenly"
+                            onClick={goContactus}
+                          >
+                            Contact us
+                            <GoArrowUpRight className="arrow-head-icon" />
+                          </div>
+            
+                          <div className="menu-mobile-home">
+                            <div
+                              className="menu-mobile-home p-2"
+                              style={{ cursor: "pointer" }}
+                              onClick={toggleMenu}
+                              ref={menuRef}
+                            >
+                              <HiMenuAlt3 size={30} />
+                            </div>
+            
+                            {isOpen && (
+                              <div className="custom-menu ">
+                                <div
+                                  onClick={gohome}
+                                  className="custom-menu-item"
+                                  
+                                >
+                                  Home
+                                </div>
+                                <div className="custom-menu-item" onClick={goAboutus}>
+                                  About
+                                </div>
+                               <div  className="custom-menu-item">Blog</div>
+                                <div onClick={goTocasestudies} className="custom-menu-item">Case Studies</div>
+            
+            
+                                <div onClick={goContactus} className="custom-menu-item">Contact Us</div>
+            
+                              </div>
+                            )}
+                          </div>
+                        </div>
           </div>
 
           <section>
