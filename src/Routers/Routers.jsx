@@ -9,6 +9,7 @@ import Aryu_case from '../Pages/Aryu_case';
 import Coffee_case from '../Pages/Coffee_case';
 import Storyrise_case from '../Pages/Hoodie_case';
 import About_us from '../Pages/About_us';
+import Contact from '../Pages/Contact';
 
 function Routers() {
   return (
@@ -20,6 +21,7 @@ function Routers() {
 
      <Route path="/coofee-guy" element={<Coffee_case/>}/>
      <Route path="/about-us" element={<About_us/>}/>
+     <Route path="/contact-us" element={<Contact/>}/>
 
    </Routes>
   )

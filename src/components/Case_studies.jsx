@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect,useRef } from "react";
 import "../assets/css/casestudies.css";
 import Rotate1 from "../assets/images/rotateimg1.svg";
 import { useNavigate } from "react-router-dom";
@@ -30,6 +30,8 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import Footer from "../Pages/Footer";
+import { AiFillHome } from "react-icons/ai";
+import { HiMenuAlt3 } from "react-icons/hi";
 
 function Case_studies() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -80,7 +82,28 @@ function Case_studies() {
   const containerWidth = windowWidth <= 481 ? "350px" : windowWidth <= 768 ? "500px" : "700px";
   const containerHeight = windowWidth <= 481 ? "auto" : windowWidth <= 768 ? "400px" : "400px";
 
+  const goTocasestudies = () => {
+    
+    navigate("/case-studies");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
+  const goAboutus = () => {
+    navigate("/about-us");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+   const gohome = () => {
+    navigate("/");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+   const goContactus = () => {
+    navigate("/contact-us");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+  const toggleMenu = () => setIsOpen(!isOpen);
   return (
     <>
       <section>
@@ -90,30 +113,72 @@ function Case_studies() {
             isScrolled ? "blur-bg" : ""
           }`}
         >
-          <div
-            className={`story-header  d-flex justify-content-between ${
-              isScrolled ? "fixed" : ""
-            }`}
-          >
-            <div>
-              <a href="/">
-                <img
-                  src={Storylise_logo}
-                  alt="Storylise logo"
-                  className="storyrise"
-                />
-              </a>
-            </div>
-            <a
-              href="https://calendly.com/yuvaraj/freeassesment?month=2025-03"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="case-studies d-flex justify-content-evenly">
-                BOOK A CALL
-              </div>
-            </a>
-          </div>
+           <div
+                        className={`story-header  d-flex justify-content-between ${
+                          isScrolled ? "fixed" : ""
+                        }`}
+                      >
+                        <div>
+                          <a href="/">
+                            <img
+                              src={Storylise_logo}
+                              alt="Storylise logo"
+                              className="storyrise"
+                            />
+                          </a>
+                        </div>
+                        <div className="header-middle">
+                          <div onClick={gohome} className="all-head-color">
+                            <AiFillHome />
+                          </div>
+                          <div className="header-abouts-name" onClick={goAboutus}>
+                            About us
+                          </div>
+                          <div className="header-abouts-name">Blog</div>
+                          <div className="header-abouts-name" onClick={goTocasestudies}>
+                            Case Studies{" "}
+                          </div>
+                        </div>
+                        <div
+                          className="case-studies d-flex justify-content-evenly"
+                          onClick={goContactus}
+                        >
+                          Contact us
+                          <GoArrowUpRight className="arrow-head-icon" />
+                        </div>
+          
+                        <div className="menu-mobile-home">
+                          <div
+                            className="menu-mobile-home p-2"
+                            style={{ cursor: "pointer" }}
+                            onClick={toggleMenu}
+                            ref={menuRef}
+                          >
+                            <HiMenuAlt3 size={30} />
+                          </div>
+          
+                          {isOpen && (
+                            <div className="custom-menu ">
+                              <div
+                                onClick={gohome}
+                                className="custom-menu-item"
+                                
+                              >
+                                Home
+                              </div>
+                              <div className="custom-menu-item" onClick={goAboutus}>
+                                About
+                              </div>
+                             <div  className="custom-menu-item">Blog</div>
+                              <div onClick={goTocasestudies} className="custom-menu-item">Case Studies</div>
+          
+          
+                              <div onClick={goContactus} className="custom-menu-item">Contact Us</div>
+          
+                            </div>
+                          )}
+                        </div>
+                      </div>
         </div>
         <section className="mt-5 d-flex justify-content-center">
           <div className="d-flex justify-content-around flex-wrap ">

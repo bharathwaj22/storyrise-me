@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import CustomCursor from "../components/Custom_mouse";
 
 import SplashCursor from "../components/splash_cursor";
@@ -48,10 +48,19 @@ import Image5 from "../assets/images/image 5.svg";
 import Image6 from "../assets/images/image 6.svg";
 import Image7 from "../assets/images/image 7.svg";
 import Image8 from "../assets/images/image 8.svg";
+
+
 import Ogimage from "../../public/storylise-logo.png";
 import Footer from "../Pages/Footer";
 import Bulb from "../Pages/Bulb";
 import Story_how_image from "../assets/images/abouts/storyrise-how-image.svg";
+import Header from "./header";
+
+// headericon
+
+import { AiFillHome } from "react-icons/ai";
+import { HiMenuAlt3 } from "react-icons/hi";
+import { log } from "three/tsl";
 
 // rotae
 
@@ -177,21 +186,52 @@ function home() {
   const navigate = useNavigate();
 
   const goTocasestudies = () => {
+    
     navigate("/case-studies");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const goAboutus = () => {
+    navigate("/about-us");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+   const gohome = () => {
+    navigate("/");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+   const goContactus = () => {
+    navigate("/contact-us");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (menuRef.current && !menuRef.current.contains(event.target)) {
+  //       setIsOpen(false);
+  //     }
+  //   };
+  //   if (isOpen) {
+  //     document.addEventListener("mousedown", handleClickOutside);
+  //   } else {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   }
+
+  //   // Cleanup on unmount
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [isOpen]);
+
   return (
     <>
       <section className="pb-1">
         {/* <SplashCursor /> */}
 
         <section className="header-iamge position-relative">
-          {/* <canvas
-            id="fluid"
-            className="w-100 h-100 position-absolute top-0 start-0"
-          ></canvas> */}
-          {/* <CustomCursor /> */}
-
           <SplashCursor />
 
           <div
@@ -213,32 +253,60 @@ function home() {
                   />
                 </a>
               </div>
+              <div className="header-middle">
+                <div onClick={gohome} className="all-head-color">
+                  <AiFillHome />
+                </div>
+                <div className="header-abouts-name" onClick={goAboutus}>
+                  About us
+                </div>
+                <div className="header-abouts-name">Blog</div>
+                <div className="header-abouts-name" onClick={goTocasestudies}>
+                  Case Studies{" "}
+                </div>
+              </div>
               <div
                 className="case-studies d-flex justify-content-evenly"
-                onClick={goTocasestudies}
+                onClick={goContactus}
               >
-                CASE STUDIES
+                Contact us
                 <GoArrowUpRight className="arrow-head-icon" />
+              </div>
+
+              <div className="menu-mobile-home">
+                <div
+                  className="menu-mobile-home p-2"
+                  style={{ cursor: "pointer" }}
+                  onClick={toggleMenu}
+                  ref={menuRef}
+                >
+                  <HiMenuAlt3 size={30} />
+                </div>
+
+                {isOpen && (
+                  <div className="custom-menu ">
+                    <div
+                      onClick={gohome}
+                      className="custom-menu-item"
+                      
+                    >
+                      Home
+                    </div>
+                    <div className="custom-menu-item" onClick={goAboutus}>
+                      About
+                    </div>
+                   <div  className="custom-menu-item">Blog</div>
+                    <div onClick={goTocasestudies} className="custom-menu-item">Case Studies</div>
+
+
+                    <div onClick={goContactus} className="custom-menu-item">Contact Us</div>
+
+                  </div>
+                )}
               </div>
             </div>
           </div>
-          {/* <div className="sticky-top d-md-none ">
-          <div className=" story-header-mobile d-flex justify-content-between ">
-              <div>
-                <a href="/">
-                  <img
-                    src={Storylise_logo}
-                    alt="Storylise logo"
-                    className="storyrise-mobile-view"
-                  />
-                </a>
-              </div>
-              <div className="case-studies d-flex justify-content-evenly">
-                CASE STUDIES
-                <GoArrowUpRight className="arrow-head-icon" />
-              </div>
-            </div>
-          </div> */}
+
           <section>
             <div className="text-center mt-5 ">
               <h1 className="your-title ">
@@ -264,16 +332,12 @@ function home() {
                   <GoArrowUpRight className="arrow-head-icon" />
                 </div> */}
 
-                <a
-                  href="https://calendly.com/yuvaraj/freeassesment?month=2025-03"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <div onClick={goContactus}>
                   {" "}
                   <Magnet padding={50} disabled={false} magnetStrength={50}>
                     <div className="case-studies-large pt-1 d-flex justify-content-evenly align-items-center">
                       <ShinyText
-                        text="BOOK A CALL"
+                        text="Get Started"
                         disabled={false}
                         speed={3}
                         className="custom-class"
@@ -281,7 +345,7 @@ function home() {
                       {/* <GoArrowUpRight className="arrow-head-icon-arrow" /> */}
                     </div>
                   </Magnet>
-                </a>
+                </div>
               </div>
             </div>
           </section>
@@ -341,7 +405,7 @@ function home() {
 
         {/* <Bulb></Bulb> */}
 
-        <section>
+        {/* <section>
           <div className="d-flex justify-content-center text-align-top">
             <div className="d-flex flex-wrap justify-content-evenly gap-5">
               <div className="years-exp pt-3">
@@ -370,7 +434,7 @@ function home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         {/* video */}
         <section className="text-align-top">
           <div className="video-all-box">
@@ -586,16 +650,12 @@ function home() {
                   <span className="mx-2  ">24/7 Customer Support</span>
                 </div>
                 <div>
-                  <a
-                    href="https://calendly.com/yuvaraj/freeassesment?month=2025-03"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="book-call mt-4">
-                      Book a call
+                  
+                    <div className="book-call mt-4" onClick={goContactus}>
+                      Get Started
                       <GoArrowUpRight className="arrow-book-icon mx-2" />
                     </div>
-                  </a>
+                  
                 </div>
               </div>
 
@@ -633,16 +693,12 @@ function home() {
                   </span>
                 </div>
                 <div>
-                  <a
-                    href="https://calendly.com/yuvaraj/freeassesment?month=2025-03"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="book-call-medium mt-4">
-                      Book a call
+                 
+                    <div className="book-call-medium mt-4" onClick={goContactus}>
+                     Get Started
                       <GoArrowUpRight className="arrow-book-icon-medium mx-2" />
                     </div>
-                  </a>
+                  
                 </div>
               </div>
               <div className="base-advance">
@@ -677,16 +733,12 @@ function home() {
                   <span className="mx-2  ">24/7 Customer Support</span>
                 </div>
                 <div>
-                  <a
-                    href="https://calendly.com/yuvaraj/freeassesment?month=2025-03"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="book-call-advance mt-4">
-                      Book a call
+                  
+                    <div className="book-call-advance mt-4" onClick={goContactus}>
+                      Get Started
                       <GoArrowUpRight className="arrow-book-icon-advance mx-2" />
                     </div>
-                  </a>
+                  
                 </div>
               </div>
             </div>
@@ -704,9 +756,7 @@ function home() {
                 <div className="quest-box">
                   <div className="quest-flex">
                     <div>What is Influencer Marketing? </div>
-                    <div className="quest-icon">
-                      <GrAddCircle />
-                    </div>
+                    
                   </div>
 
                   <div className={`hover-text-quest `}>
@@ -721,9 +771,9 @@ function home() {
                 <div className="quest-box">
                   <div className="quest-flex">
                     <div>Who is an Influencer?</div>
-                    <div className="quest-icon">
+                    {/* <div className="quest-icon">
                       <GrAddCircle />
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="hover-text-quest">
@@ -737,10 +787,12 @@ function home() {
               <div className="d-flex flex-wrap gap-3 mt-3 mt-md-5">
                 <div className="quest-box">
                   <div className="quest-flex">
-                    <div className="text-left">What Do Influencer Marketing Agencies Do? </div>
-                    <div className="quest-icon">
-                      <GrAddCircle />
+                    <div className="text-left">
+                      What Do Influencer Marketing Agencies Do?{" "}
                     </div>
+                    {/* <div className="quest-icon">
+                      <GrAddCircle />
+                    </div> */}
                   </div>
 
                   <div className="hover-text-quest">
@@ -757,9 +809,9 @@ function home() {
                     <div>
                       How does influencer marketing build real brand trust?
                     </div>
-                    <div className="quest-icon">
+                    {/* <div className="quest-icon">
                       <GrAddCircle />
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="hover-text-quest">
@@ -775,9 +827,9 @@ function home() {
                 <div className="quest-box">
                   <div className="quest-flex">
                     <div>How Do I Find the Right Influencers?</div>
-                    <div className="quest-icon">
+                    {/* <div className="quest-icon">
                       <GrAddCircle />
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="hover-text-quest">
@@ -795,9 +847,9 @@ function home() {
                     <div>
                       How Can I Measure the Success of an Influencer Campaign?{" "}
                     </div>
-                    <div className="quest-icon">
+                    {/* <div className="quest-icon">
                       <GrAddCircle />
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="hover-text-quest">
@@ -816,9 +868,9 @@ function home() {
                       Which Social Media Platforms Are Best for Influencer
                       Marketing?{" "}
                     </div>
-                    <div className="quest-icon">
+                    {/* <div className="quest-icon">
                       <GrAddCircle />
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="hover-text-quest">
@@ -831,9 +883,9 @@ function home() {
                 <div className="quest-box">
                   <div className="quest-flex">
                     <div>What Are the Benefits of Influencer Marketing? </div>
-                    <div className="quest-icon">
+                    {/* <div className="quest-icon">
                       <GrAddCircle />
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="hover-text-quest">

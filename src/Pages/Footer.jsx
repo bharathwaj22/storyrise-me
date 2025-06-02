@@ -39,7 +39,13 @@ const goTocasestudies = () => {
                     </a>
                   </div>
     
-                  <div className="hiring-footer" onClick={goAboutus}>About US</div>
+                  <div  className="hiring-footer"  >
+                   <a
+                      href="/about-us"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >About US
+                    </a></div>
                   <div className="hiring-footer">
                     <a
                       href="/case-studies"
