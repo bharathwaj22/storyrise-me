@@ -49,6 +49,7 @@
 }
 .all-padding-about{
     padding-left: 5%;
+    padding-right: 5%;
 }
 
 .about-padding{
@@ -181,9 +182,7 @@
     
     padding-top: 2%;
 }
-.card-bg-color{
-    background-color: #FFFFFF1A;
-}
+
 
 .ceo-image img{
     width: 400px;
@@ -381,6 +380,25 @@ margin-top: 2%;
     width: 90%;
     margin-top: 5%;
 }
+
+.bg-backred{
+    background-color: #FFC927;
+    border-radius: 10px 10px 0 0;
+}
+.bg-backyello{
+    background-color: #8450E7;
+    border-radius: 10px 10px 0 0;
+}
+.card-bg-color{
+    background-color:#A0ECB1;
+    border-radius: 10px 10px 0 0;
+
+}
+.all-section-scrooll{
+ padding: 5%;
+}
+
+
 
 
 

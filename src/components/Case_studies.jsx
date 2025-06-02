@@ -274,7 +274,8 @@ function Case_studies() {
                 }}
               />
             </div>
-            <div>
+            {/* ashwin desgin will hide */}
+            {/* <div>
               <TiltedCard
                 imageSrc={Ztrategize_banner}
                 altText="Kendrick Lamar - GNX Album Cover"
@@ -321,7 +322,7 @@ function Case_studies() {
                   ),
                 }}
               />
-            </div>
+            </div> */}
           </div>
         </section>
 

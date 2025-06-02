@@ -44,7 +44,7 @@ function App() {
     <BrowserRouter>
 
       {/* Particle Background */}
-      <div 
+      {/* <div 
         style={{ 
           position: 'fixed', 
           top: 0, 
@@ -64,7 +64,7 @@ function App() {
           alphaParticles={true}
           disableRotation={false}
         />
-      </div>
+      </div> */}
       {/* <SplashCursor /> */}
 
       {/* Main Content */}
