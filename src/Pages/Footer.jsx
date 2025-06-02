@@ -19,6 +19,11 @@ const goAboutus = () => {
   navigate("/about-us");
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
+
+const goTocasestudies = () => {
+    navigate("/case-studies");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <>
       <section>

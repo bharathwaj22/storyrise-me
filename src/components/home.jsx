@@ -555,9 +555,9 @@ function home() {
               </div> */}
 
               <div className="base-plan ">
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-center">
                   <div className="basic-text">Basic Plan</div>
-                  <div className="basic-month">$9.99/month</div>
+                  {/* <div className="basic-month">$9.99/month</div> */}
                 </div>
                 <div className="basic-inside-text mt-3">
                   Perfect for individuals and small businesses just starting to
@@ -600,9 +600,9 @@ function home() {
               </div>
 
               <div className="base-medium">
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-center">
                   <div className="basic-text-medium">Medium </div>
-                  <div className="basic-month-medium">$29.99/month</div>
+                  {/* <div className="basic-month-medium">$29.99/month</div> */}
                 </div>
                 <div className="basic-inside-text-medium mt-3">
                   Ideal for growing businesses and teams that require more
@@ -646,9 +646,9 @@ function home() {
                 </div>
               </div>
               <div className="base-advance">
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-center">
                   <div className="basic-text">Advance </div>
-                  <div className="basic-month">$9.99/month</div>
+                  {/* <div className="basic-month">$9.99/month</div> */}
                 </div>
                 <div className="basic-inside-text mt-3">
                   Perfect for individuals and small businesses just starting to
@@ -737,7 +737,7 @@ function home() {
               <div className="d-flex flex-wrap gap-3 mt-3 mt-md-5">
                 <div className="quest-box">
                   <div className="quest-flex">
-                    <div>What Do Influencer Marketing Agencies Do? </div>
+                    <div className="text-left">What Do Influencer Marketing Agencies Do? </div>
                     <div className="quest-icon">
                       <GrAddCircle />
                     </div>

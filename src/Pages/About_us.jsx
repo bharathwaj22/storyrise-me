@@ -164,61 +164,61 @@ function About_us() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  //   useEffect(() => {
-  //     // Apply animations only on larger screens
-  //     if (window.innerWidth >= 768) {
-  //       const triggers = document.querySelectorAll(".service-item");
-  //       triggers.forEach((trigger, index) => {
-  //         gsap
-  //           .timeline({
-  //             scrollTrigger: {
-  //               trigger: trigger,
-  //               start: "top top", // Trigger when the element's top hits the viewport top
-  //               end: "+=300", // Adjust this value to match the desired pin duration in pixels
-  //               scrub: 1, // Smooth scrubbing for the pin duration
-  //               pin: true, // Pin all elements
-  //             },
-  //           })
-  //           .to(trigger, {
-  //             opacity: 10, // Fade out the element
-  //             y: 100, // Move element downward
-  //             scale: 0.9, // Shrink the element's size while scrolling
-  //             duration: 1,
-  //           });
-  //       });
-  //       return () => {
-  //         ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  //       };
-  //     }
-  //   }, []);
+ 
+  //  useEffect(() => {
+  //   // Apply animations only on larger screens
+  //   if (window.innerWidth >= 768) {
+  //     const triggers = document.querySelectorAll(".service-item");
+  //     triggers.forEach((trigger, index) => {
+  //       gsap
+  //         .timeline({
+  //           scrollTrigger: {
+  //             trigger: trigger,
+  //             start: "top top", // Trigger when the element's top hits the viewport top
+  //             end: "+=600", // Adjust this value to match the desired pin duration in pixels
+  //             scrub: 3, // Smooth scrubbing for the pin duration
+  //             pin: true, // Pin all elements
+  //           },
+  //         })
+  //         .to(trigger, {
+  //           opacity: 0, // Fade out the element
+  //           y: 100, // Move element downward
+  //           scale: 0.9, // Shrink the element's size while scrolling
+  //           duration: 1,
+  //         });
+  //     });
+  //     return () => {
+  //       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  //     };
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    // Apply animations only on larger screens
-    if (window.innerWidth >= 768) {
-      const triggers = document.querySelectorAll(".service-item");
-      triggers.forEach((trigger, index) => {
-        gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: trigger,
-              start: "top 20%", // Trigger when the element's top hits the viewport top
-              end: "+200", // Adjust this value to match the desired pin duration in pixels
-              scrub: 2, // Smooth scrubbing for the pin duration
-              pin: true, // Pin all elements
-            },
-          })
-          .to(trigger, {
-            opacity: 0, 
-            y: 100, 
-            scale: 0.9, 
-            duration: 0.5,
-          });
-      });
-      return () => {
-        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-      };
-    }
-  }, []);
+
+ useEffect(() => {
+  if (window.innerWidth >= 768) {
+    const triggers = document.querySelectorAll(".service-item");
+    triggers.forEach((trigger) => {
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: trigger,
+          start: "top 25%",  // Trigger when top of element reaches center of viewport
+          end: "bottom top",
+          scrub: 3,
+          pin: true,
+          pinSpacing: false,
+        },
+      })
+      .fromTo(trigger, 
+        { opacity: 1, y: 0, scale: 1 },  // starting fully visible & centered
+        { opacity: 0, y: 100, scale: 0.9, duration: 1 } // animate on scroll
+      );
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }
+}, []);
 
   const responsive = {
     desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
@@ -229,19 +229,13 @@ function About_us() {
     navigate("/aryuacademy-guy");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  //   const hoodieCase = () => {
-  //     navigate("/hoodie-guy");
-  //     window.scrollTo({ top: 0, behavior: "smooth" });
-  //   };
+
 
   const coffeeCase = () => {
     navigate("/coofee-guy");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  // const images_swipe = [
-  //   { src: Aryu_banner, alt: "Hoodie Guy", onClick: () => console.log("Aryu Clicked") },
-  //   { src: Coffie_banner, alt: "Coffee House", onClick: () => console.log("Coffee Clicked") },
-  // ]
+ 
   return (
     <>
       <section className="">
@@ -321,36 +315,12 @@ function About_us() {
             </div>
           </div>
         </section>
-        {/* trail images */}
+        
 
-        {/* <section>
-        <div style={{ height: '500px', position: 'relative', overflow: 'hidden'}}>
-        <h2>
-                <span className="influencer-color-start">The Rise</span>
-                <span className="influencer-color-end"> Behind</span>{" "}
-              </h2>
-              <div className="story-about">the Story</div>
-    
-  <ImageTrail
-    // key={key}
-    
-    items={[
-      'https://picsum.photos/id/287/300/300',
-      'https://picsum.photos/id/1001/300/300',
-      'https://picsum.photos/id/1025/300/300',
-      'https://picsum.photos/id/1026/300/300',
-      'https://picsum.photos/id/1027/300/300',
-      'https://picsum.photos/id/1028/300/300',
-      'https://picsum.photos/id/1029/300/300',
-      'https://picsum.photos/id/1030/300/300',
-      // ...
-    ]}
-    variant={1}
-  />
-</div>
-        </section> */}
 
-        <section className="story-section">
+        {/* mulit image what do we */}
+
+        {/* <section className="story-section">
           <div className="story-container">
             <div className="story-text">
               <h2>
@@ -373,61 +343,66 @@ function About_us() {
               variant={1}
             />
           </div>
+        </section> */}
+        <section className="all-section-scrooll">
+          <section className=" service-item bg-backred">
+            <div className="about-small-div">
+              <div>
+                <div className="card-about">Content</div>
+              </div>
+              <div className="card-width">
+                <div className="about-card-content">Content Strategy</div>
+                <div className="card-about-small">
+                  We start by knowing your business goals and the people you're
+                  trying to reach. From there, we develop a customized content
+                  strategy focused on creating meaningful, platform-relevant
+                  content. With ongoing performance tracking and insights, we
+                  continuously optimize to align with your objectives and drive
+                  growth.
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className=" service-item card-bg-color">
+            <div className="about-small-div-video ">
+              <div className="card-width">
+                <div className="about-card-content">Video Creation</div>
+                <div className="card-about-small">
+                  Our video creation process covers every step—from concept
+                  ideation and scripting to filming, editing, and final
+                  distribution. We produce high-quality videos that capture your
+                  attention, tell your story, and clearly communicate your
+                  brand’s message.
+                </div>
+              </div>
+              <div>
+                <div className="card-about1">Video </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="service-item bg-backyello">
+            <div className="about-small-div ">
+              <div>
+                <div className="card-about2">Social Media </div>
+              </div>
+              <div className="card-width">
+                <div className="about-card-content">
+                  Social Media Management
+                </div>
+                <div className="card-about-small">
+                  We build a content calendar, manage scheduling, and engage
+                  consistently with your community. By monitoring performance
+                  and refining strategies, we help your brand stay relevant,
+                  build trust, and grow relationships online.
+                </div>
+              </div>
+            </div>
+          </section>
         </section>
 
-        <section>
-          <div className="about-small-div">
-            <div>
-              <div className="card-about">Content</div>
-            </div>
-            <div className="card-width">
-              <div className="about-card-content">Content Strategy</div>
-              <div className="card-about-small">
-                We start by knowing your business goals and the people you're
-                trying to reach. From there, we develop a customized content
-                strategy focused on creating meaningful, platform-relevant
-                content. With ongoing performance tracking and insights, we
-                continuously optimize to align with your objectives and drive
-                growth.
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="card-bg-color">
-          <div className="about-small-div-video ">
-            <div className="card-width">
-              <div className="about-card-content">Video Creation</div>
-              <div className="card-about-small">
-                Our video creation process covers every step—from concept
-                ideation and scripting to filming, editing, and final
-                distribution. We produce high-quality videos that capture your
-                attention, tell your story, and clearly communicate your brand’s
-                message.
-              </div>
-            </div>
-            <div>
-              <div className="card-about1">Video </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="">
-          <div className="about-small-div ">
-            <div>
-              <div className="card-about2">Social Media </div>
-            </div>
-            <div className="card-width">
-              <div className="about-card-content">Social Media Management</div>
-              <div className="card-about-small">
-                We build a content calendar, manage scheduling, and engage
-                consistently with your community. By monitoring performance and
-                refining strategies, we help your brand stay relevant, build
-                trust, and grow relationships online.
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="all-padding-about">
+        {/* hoodie guys team members image */}
+        {/* <section className="all-padding-about">
           <div>
             <div className="about-agency">Meet Our Fantastic Team!</div>
             <div className="d-flex justify-content-center flex-wrap gap-5 pt-3">
@@ -454,7 +429,7 @@ function About_us() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section>
           <div className="about-agency text-center">Clients Portfolio</div>
