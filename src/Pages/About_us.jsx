@@ -206,7 +206,7 @@ function About_us() {
       gsap.timeline({
         scrollTrigger: {
           trigger: trigger,
-          start: "top 25%",  // Trigger when top of element reaches center of viewport
+          start: "top 20%",  
           end: "bottom top",
           scrub: 3,
           pin: true,
@@ -432,7 +432,7 @@ function About_us() {
               </div>
             </div>
           </section>
-          <section className=" service-item card-bg-color">
+          <section className=" service-item card-bg-color ">
             <div className="about-small-div-video ">
               <div className="card-width">
                 <div className="about-card-content">Video Creation</div>
@@ -456,10 +456,10 @@ function About_us() {
                 <div className="card-about2">Social Media </div>
               </div>
               <div className="card-width">
-                <div className="about-card-content">
+                <div className="about-card-content1">
                   Social Media Management
                 </div>
-                <div className="card-about-small">
+                <div className="card-about-small1">
                   We build a content calendar, manage scheduling, and engage
                   consistently with your community. By monitoring performance
                   and refining strategies, we help your brand stay relevant,
@@ -534,20 +534,16 @@ function About_us() {
                     <div>The Rise Behind the</div>
                     <div>Story</div>
                   </div>
-                  <a
-                    href="https://calendly.com/yuvaraj/freeassesment?month=2025-03"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                 
                     <div className="d-flex justify-content-center">
-                      <div className="connect-about">
+                      <div className="connect-about" onClick={goContactus}>
                         Let’s Connect{" "}
                         <span className="px-3">
                           -<FaArrowRight />
                         </span>
                       </div>
                     </div>
-                  </a>
+                  
                 </div>
               </div>
             </div>

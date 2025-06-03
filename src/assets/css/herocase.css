@@ -609,6 +609,15 @@ border-top-right-radius: 20px;
   height: 400px;
 }
 
+.silk-width{
+  width: 80%;
+  height: 500px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+
+
 /* Mobile View Optimization */
 @media (max-width: 768px) {
 

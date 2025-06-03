@@ -61,6 +61,7 @@ import Header from "./header";
 import { AiFillHome } from "react-icons/ai";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { log } from "three/tsl";
+import Silk from '../components/Silk';
 
 // rotae
 
@@ -823,7 +824,7 @@ function home() {
                   </div>
                 </div>
               </div>
-              <div className="d-flex flex-wrap gap-3 mmt-3 mt-md-5">
+              <div className="d-flex flex-wrap gap-3 mt-3 mt-md-5">
                 <div className="quest-box">
                   <div className="quest-flex">
                     <div>How Do I Find the Right Influencers?</div>
@@ -899,6 +900,20 @@ function home() {
             </div>
           </div>
         </section>
+
+        {/* silk desgin */}
+{/* 
+<section className="d-flex justify-content-center">
+  <div className="silk-width" >
+            <Silk
+  speed={5}
+  scale={1}
+  color="#FFC927"
+  noiseIntensity={1.5}
+  rotation={0}
+/>
+  </div>
+</section> */}
 
         {/* footer */}
         {/* <section>
