@@ -33,11 +33,18 @@ import Particles from '../src/components/Pratical_star';
 import Layout from '../src/components/Layout';
 import Router from '../src/Routers/Routers';
 import { BrowserRouter } from 'react-router-dom';
+import { TfiLocationArrow } from "react-icons/tfi";
 
 
 import './App.css'
 
 function App() {
+  // document.addEventListener("mousemove", function (e) {
+  //   const cursor = document.getElementById("customCursor");
+  //   cursor.style.top = e.clientY + "px";
+  //   cursor.style.left = e.clientX + "px";
+  // });
+
   
   return (
     <>
@@ -68,6 +75,11 @@ function App() {
       {/* <SplashCursor /> */}
 
       {/* Main Content */}
+{/* <div id="customCursor">
+ <TfiLocationArrow className="arrow-icon" />
+  <span class="cursor-text">you </span>
+</div> */}
+
 
 
       <Layout>

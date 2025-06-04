@@ -40,14 +40,14 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 // images
 
-import Image1 from "../assets/images/image 1.svg";
-import Image2 from "../assets/images/image 2.svg";
-import Image3 from "../assets/images/image 3.svg";
-import Image4 from "../assets/images/image 4.svg";
-import Image5 from "../assets/images/image 5.svg";
-import Image6 from "../assets/images/image 6.svg";
-import Image7 from "../assets/images/image 7.svg";
-import Image8 from "../assets/images/image 8.svg";
+import Image1 from "../assets/images/image 1.png";
+import Image2 from "../assets/images/image 2.png";
+import Image3 from "../assets/images/image 3.png";
+import Image4 from "../assets/images/image 4.png";
+import Image5 from "../assets/images/image 5.png";
+import Image6 from "../assets/images/image 6.png";
+import Image7 from "../assets/images/image 7.png";
+import Image8 from "../assets/images/image 8.png";
 
 
 import Ogimage from "../../public/storylise-logo.png";
@@ -462,7 +462,7 @@ function home() {
         <section>
           <div className="mt-5">
             <Marquee
-              className="flex justify-between gap-4 [--duration:5s]"
+              className="flex justify-between gap-5 [--duration:5s]"
               speed={30}
               gradient={false}
               pauseOnHover={false}
@@ -472,7 +472,7 @@ function home() {
                   <img
                     src={content.image}
                     alt={content.alttag}
-                    className="w-16 h-16 mx-2 marquee-image"
+                    className="w-16 h-16 mx-3 marquee-image transition-all duration-300 group-hover:grayscale group-hover:brightness-50"
                     loading="lazy"
                   />
                   <span>{content.name}</span>

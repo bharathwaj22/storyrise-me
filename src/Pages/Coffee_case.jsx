@@ -952,7 +952,7 @@ function Coffee_case() {
             className="insta-views-case d-flex justify-content-evenly "
             onClick={() =>
               window.open(
-                "https://www.instagram.com/aryuacademyofficial/ ",
+                "https://www.instagram.com/thesouthindiancoffeehouse?igsh=amR2bG8ydTB0ZGMy",
                 "_blank"
               )
             }
