@@ -3,6 +3,41 @@ body{
     
 }
 
+/* Hide default cursor */
+/* body {
+  cursor: none;
+} */
+
+/* Custom cursor container */
+#customCursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.08s ease-out;
+}
+
+/* SVG arrow styling */
+.arrow-icon {
+  width: 28px;
+  height: 28px;
+  fill: gold;
+}
+
+/* Text styling */
+.cursor-text {
+  font-size: 14px;
+  color: gold;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+
 @font-face {
     font-family: "nunito-bold";
     src: url("../fonts/NunitoSans_10pt-SemiBold.ttf");
@@ -491,14 +526,31 @@ position: relative;
 
 /* marquee */
 
-.marquee-image{
-    width: 308px;
-    height: 105px;
-  }
+/* .marquee-image{
+    width: 250px;
+    height: 70px;
+} */
+.marquee-image {
+  width: 250px;
+  height: 70px;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.marquee-image:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+
+
+
   
   /* best-deal */
   
-  .base-plan{
+.base-plan{
     width: 450px;
     border-radius: 16px;
     background-color: #E1E0DF;

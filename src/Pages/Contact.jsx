@@ -87,9 +87,9 @@ function Contact() {
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
-    phn_no: "",
+    phone: "",
 
-    description: "",
+    message: "",
     // course:"Digital marketing",
   });
 
@@ -97,8 +97,8 @@ function Contact() {
   const [formErrors, setFormErrors] = useState({
     name: false,
     email: false,
-    phn_no: false,
-    description: false,
+    phone: false,
+    message: false,
   });
 
   // Handle input change
@@ -127,19 +127,19 @@ function Contact() {
     } else if (!/\S+@\S+\.\S+/.test(formValues.email)) {
       errors.email = "Email is invalid.";
     }
-    if (!formValues.phn_no.trim()) {
-      errors.phn_no = "phn_no number is required.";
+    if (!formValues.phone.trim()) {
+      errors.phone = "phone number is required.";
     }
-    if (!formValues.description.trim()) {
-      errors.description = "description is required.";
+    if (!formValues.message.trim()) {
+      errors.message = "message is required.";
     }
 
     // Update the state with errors
     setFormErrors({
       name: !!errors.name,
       email: !!errors.email,
-      phn_no: !!errors.phn_no,
-      description: !!errors.description,
+      phone: !!errors.phone,
+      message: !!errors.message,
     });
 
     // If there are errors, prevent form submission
@@ -153,7 +153,7 @@ function Contact() {
     try {
       console.log("hello", formValues);
       const response = await axios.post(
-        `${API_URL}/api/v1/freeconslutaion
+        `${API_URL}/api/v1/story-rise
       `,
         formValues
       );
@@ -180,10 +180,11 @@ function Contact() {
       setFormValues({
         name: "",
         email: "",
-        phn_no: "",
-        description: "",
+        phone: "",
+        message: "",
       });
     } catch (error) {
+      if (loader) loader.style.display = "none";
       console.error("Error submitting form:", error);
 
       // SweetAlert2 ferror alert
@@ -213,6 +214,9 @@ function Contact() {
 
   return (
     <section className="pb-1">
+       <div id="global-loader" className="global-loader hidden">
+  <div className="spinner"></div>
+</div>
       <SplashCursor />
 
       <section className="header-iamge position-relative">
@@ -356,7 +360,7 @@ function Contact() {
                 </div>
                 <div
                   className={`floating-label-group ${
-                    formErrors.phn_no ? "border border-danger" : ""
+                    formErrors.phone ? "border border-danger" : ""
                   }`}
                 >
                   <input
@@ -364,8 +368,8 @@ function Contact() {
                     id="mobile"
                     required
                     placeholder=" "
-                    name="phn_no"
-                    value={formValues.phn_no}
+                    name="phone"
+                    value={formValues.phone}
                     onChange={handleInputChange}
                     onKeyUp={handleKeyUp}
                     // autoComplete="off"
@@ -418,7 +422,7 @@ function Contact() {
                     }`}
                     disabled={!captchaValue}
                   >
-                    Send it to the moon
+                    Get Started
                   </button>
                 
               </form>

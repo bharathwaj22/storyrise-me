@@ -41,15 +41,15 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 // images
 
-import Image1 from "../assets/images/abouts/sample.svg";
-import Image2 from "../assets/images/image 2.svg";
-import Image3 from "../assets/images/image 3.svg";
-import Image4 from "../assets/images/image 4.svg";
-import Image5 from "../assets/images/image 5.svg";
-import Image6 from "../assets/images/image 6.svg";
-import Image7 from "../assets/images/image 7.svg";
-import Image8 from "../assets/images/image 8.svg";
-import Ogimage from "../../public/storylise-logo.png";
+// import Image1 from "../assets/images/abouts/sample.svg";
+// import Image2 from "../assets/images/image 2.svg";
+// import Image3 from "../assets/images/image 3.svg";
+// import Image4 from "../assets/images/image 4.svg";
+// import Image5 from "../assets/images/image 5.svg";
+// import Image6 from "../assets/images/image 6.svg";
+// import Image7 from "../assets/images/image 7.svg";
+// import Image8 from "../assets/images/image 8.svg";
+// import Ogimage from "../../public/storylise-logo.png";
 import Footer from "../Pages/Footer";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
